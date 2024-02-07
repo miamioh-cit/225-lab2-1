@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: roseaw-deployment
+  name: mosinsmj-deployment
 spec:
   replicas: 1  # Number of NGINX pods to run
   selector:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: cithit/cit225-example:latest
+        image: cithit/mosinsmj-test1:latest
         ports:
         - containerPort: 80  # Expose NGINX on port 80
 
@@ -22,7 +22,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: roseaw-service
+  name: mosinsmj-service
 spec:
   selector:
     app: nginx
@@ -30,5 +30,5 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
-      nodePort: 30100
+      nodePort: 30102
   type: NodePort
