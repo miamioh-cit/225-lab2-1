@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: cithit/mosinsmj-225-lab3-1:latest
+        image: cithit/mosinsmj-225-lab3-1:latest  #this line matches pipeline name in jenkins
         ports:
         - containerPort: 80  # Expose NGINX on port 80
 
