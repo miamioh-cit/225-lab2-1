@@ -16,7 +16,6 @@ pipeline {
                           userRemoteConfigs: [[url: "${GITHUB_URL}"]]])
             }
         }
-
         stage('Build Docker Image') {
             steps {
                 script {
